@@ -10,6 +10,7 @@ def initialize(name)
 end
 
 def deposit(money)
+  #also self.balance to refer to the balance of the BankAccount class
   @balance += money
 end
 
@@ -18,10 +19,11 @@ def display_balance
 end
 
 def valid?
-  @status == "open" && @balance > 0 ? true : false
+  balance > 0 && status == "open"
 end
 
 def close_account
+  #also self.status = "closed"
   @status = "closed"
 end
 
